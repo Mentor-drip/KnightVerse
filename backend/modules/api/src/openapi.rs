@@ -27,7 +27,6 @@ impl Modify for SecurityAddon {
 #[openapi(
     paths(
         // Player endpoints
-        players::add_player,
         players::find_player_by_id,
         players::update_player,
         players::delete_player,

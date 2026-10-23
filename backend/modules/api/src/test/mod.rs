@@ -29,7 +29,7 @@ mod tests {
             test::init_service(
                 App::new()
                     .app_data(web::Data::new(test_pool()))
-                    .service(web::scope("/v1/players").service(add_player)),
+                    .service(web::scope("/v1/players")),
             )
             .await;
         let req = test::TestRequest::post().uri("/v1/players").to_request();
@@ -44,7 +44,7 @@ mod tests {
             test::init_service(
                 App::new()
                     .app_data(web::Data::new(test_pool()))
-                    .service(web::scope("/v1/players").service(add_player)),
+                    .service(web::scope("/v1/players")),
             )
             .await;
         let req = test::TestRequest::post()
@@ -90,7 +90,7 @@ mod tests {
             test::init_service(
                 App::new()
                     .app_data(web::Data::new(test_pool()))
-                    .service(web::scope("/v1/players").service(add_player)),
+                    .service(web::scope("/v1/players")),
             )
             .await;
         let req = test::TestRequest::post()
@@ -125,7 +125,7 @@ mod tests {
             test::init_service(
                 App::new()
                     .app_data(web::Data::new(test_pool()))
-                    .service(web::scope("/v1/players").service(add_player)),
+                    .service(web::scope("/v1/players")),
             )
             .await;
         let req = test::TestRequest::post()
@@ -161,7 +161,7 @@ mod tests {
             test::init_service(
                 App::new()
                     .app_data(web::Data::new(test_pool()))
-                    .service(web::scope("/v1/players").service(add_player)),
+                    .service(web::scope("/v1/players")),
             )
             .await;
         let req = test::TestRequest::post()
